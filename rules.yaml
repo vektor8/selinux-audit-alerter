@@ -1,0 +1,19 @@
+# Example rule
+# - event_type: AVC
+#   verdict: denied
+#   actions:
+#     - ioctl
+#   fields: 
+#     - name: op
+#       value: set
+#     - name: audit_pid: 2610
+
+
+- event_type: AVC
+  verdict: denied
+  actions:
+    - ioctl
+
+- fields:
+    - name: proctitle
+      value: /sbin/auditd    
